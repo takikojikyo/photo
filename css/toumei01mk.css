@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+.relative {
+    position: relative;
+    width: 480px;
+}
+.absolute {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+}
