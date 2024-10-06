@@ -14,81 +14,91 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
       <link rel="stylesheet" type="text/css" href="css/screen.css" media="all" />
-      <body oncontextmenu="alert('当サイトではコンテキストメニューは表示されませんのでご了承ください'); return false;">
-    <body oncopy="return false;">
+
+<body oncontextmenu="alert('当サイトではコンテキストメニューは表示されませんのでご了承ください'); return false;">
+
+      <body oncopy="return false;">
 
 
 
 
 
-      <style type="text/css" style="color: #C00824">
-            body {
-                  <h6></h6>background-image: url(../nudbg.jpg);
-                  background-color: #313131;
-            }
+            <style type="text/css" style="color: #C00824">
+                  body {
+                        <h6></h6>background-image: url(../nudbg.jpg);
+                        background-color: #313131;
+                  }
 
-            body,
-            td,
-            th {
-                  font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
-                  color: #FFFFFF;
-                  font-style: normal;
-                  text-align: center;
-                  font-size: 14px;
-            }
+                  body,
+                  td,
+                  th {
+                        font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", serif;
+                        color: #FFFFFF;
+                        font-style: normal;
+                        text-align: center;
+                        font-size: 14px;
+                  }
 
-            a:link {
-                  color: #F0F995;
-            }
+                  a:link {
+                        color: #F0F995;
+                  }
 
-            a:visited {
-                  color: #F0F995;
-            }
+                  a:visited {
+                        color: #F0F995;
+                  }
 
-            a:hover {
-                  color: #F27607;
-                  font-family: inherit;
-                  font-size: 150%;
-            }
+                  a:hover {
+                        color: #F27607;
+                        font-family: inherit;
+                        font-size: 150%;
+                  }
 
-            a {
-                  font-family: abril-fatface;
-                  font-style: normal;
-                  font-weight: 400;
-            }
+                  a {
+                        font-family: abril-fatface;
+                        font-style: normal;
+                        font-weight: 400;
+                  }
 
-            h1 {
-                  color: #FEF33D;
-                  bottom: 0px;
-                  padding-top: 30px;
-                  padding-bottom: 20px;
-                  line-height: 30px;
-                  /* 行の高さを実数値＋単位(px)で指定する */
-            }
+                  h1 {
+                        color: #FEF33D;
+                        bottom: 0px;
+                        padding-top: 30px;
+                        padding-bottom: 20px;
+                        line-height: 30px;
+                        /* 行の高さを実数値＋単位(px)で指定する */
+                  }
 
-            /*        ページトップへ移動*/
-            #pageTop {
-                  position: fixed;
-                  bottom: 50px;
-                  right: 62%;
-            }
+                  /*        ページトップへ移動*/
+                  #pageTop {
+                        position: fixed;
+                        bottom: 50px;
+                        right: 62%;
+                  }
 
-            #pageTop i {
-                  padding-top: 6px
-            }
+                  #pageTop i {
+                        padding-top: 6px
+                  }
 
-            .text-box-head span{
-                  font-size: 32px;
-            }
-            .text-box-subhead span{
-                  font-size: 20px;
-                  line-height: 1.5;
-            }
-            .text-box-message{
-                  font-size: 18px;
-                  line-height: 1.3;
-            }
-            /*
+                  .text-box-head span {
+                        font-size: 32px;
+                  }
+
+                  .text-box-subhead1 {
+                        font-size: 20px;
+                        line-height: 1.5;
+                  }
+
+                  .text-box-subhead2 {
+                        font-size: 16px;
+                        line-height: 1.5;
+                  }
+
+                  .text-box-message {
+                        font-size: 18px;
+                        line-height: 1.3;
+                  }
+
+                  /*
 #pageTop a {
   display: block;
   z-index: 999;
@@ -104,47 +114,74 @@
     line-height: 0.9em;}
 */
 
-            #pageTop a:hover {
-                  color: #F27607;
-                  text-decoration: none;
-                  /*  opacity: 0.7;*/
-            }
-
-            /* 再生ボタン・ランダム再生ボタンのホバー時に色を変える */
-            #togglePlay:hover,#randomPlay:hover{
-                  background: #F0E99C;
-            }
-            .f-box{
-                  padding: 0 4%;
-            }
-
-            /* レスポンシブ対応 */
-            @media (max-width: 768px) {
-                  .text-box-head span{
-                  font-size: 28px;
-            }
-            .text-box-subhead span{
-                  font-size: 16px;
-            }
-            .text-box-message{
-                  font-size: 16px;
-            }
-            }
-
-            @media (max-width: 500px){
-                  .f-box img{
-                        width: 90%;
+                  #pageTop a:hover {
+                        color: #F27607;
+                        text-decoration: none;
+                        /*  opacity: 0.7;*/
                   }
-            } 
-      </style>
-      <script>
-            /*<![CDATA[*/
-            document.ondragstart = function () { return false; };
-            /*]]>*/
-      </script>
-      <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  -->
 
-      <!-- <script type="text/javascript">
+                  /* 再生ボタン・ランダム再生ボタンのホバー時に色を変える */
+                  .play-btn{
+                        background: #868681; 
+                        width: 20%; 
+                        padding: 8px 0; 
+                        margin-right: 15px; 
+                        transition: all 0.3s;
+                  }
+                  .play-btn:last-of-type{
+                        margin-right: 0px; 
+                  }
+                  .play-btn img{
+                        width: 36px;
+                  }
+                  .play-btn:hover{
+                        opacity: 0.7;
+                  }
+                  
+
+                  .f-box {
+                        padding: 0 4%;
+                  }
+
+                  /* レスポンシブ対応 */
+                  @media (max-width: 768px) {
+                        .text-box-head span {
+                              font-size: 28px;
+                        }
+
+                        .text-box-subhead span {
+                              font-size: 16px;
+                        }
+
+                        .text-box-message {
+                              font-size: 16px;
+                        }
+                  }
+
+                  @media (max-width: 500px) {
+                        .f-box img {
+                              width: 90%;
+                        }
+
+                        .play-btn{
+                        width: 20%; 
+                        padding: 10px 0; 
+                        margin-right: 10px; 
+                        transition: all 0.3s;
+                  }
+                  .play-btn img{
+                        width: 20px;
+                  }
+                  }
+            </style>
+            <script>
+                  /*<![CDATA[*/
+                  document.ondragstart = function () { return false; };
+                  /*]]>*/
+            </script>
+            <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  -->
+
+            <!-- <script type="text/javascript">
             $(function () {
                   var setId = '#slideshow';
                   var fadeTime = 1500;
@@ -201,842 +238,967 @@
 
             });
       </script>-->
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script type="text/javascript">
-            $(function () {
-                  var setId = '#slideshow';
-                  var fadeTime = 1500;
-                  var delayTime = 5000;
-                  var setTimer;
-                  var isRandom = false; // Random play state
-                  var isPaused = false; // Play state
 
-                  // Initialize slides
-                  $(setId + ' div div').each(function (i) {
-                        $(this).attr('id', 'view' + (i + 1).toString());
-                        $(setId + ' div div').css({ zIndex: '98', opacity: '0' });
-                        $(setId + ' div div:first').css({ zIndex: '99' }).stop().animate({ opacity: '1' }, fadeTime);
-                  });
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                  $(function () {
+                        var setId = '#slideshow';
+                        var fadeTime = 1500;
+                        var delayTime = 5000;
+                        var setTimer;
+                        var isRandom = false; // Random play state
+                        var isPaused = false; // Play state
 
-                  // Click event for navigation
-                  $(setId + ' ul li').click(function () {
-                        clearInterval(setTimer);
-
-                        var connectCont = $(setId + ' ul li').index(this);
-                        var showCont = connectCont + 1;
-
-                        // Switch the slides
-                        $(setId + ' div div#view' + (showCont)).siblings().stop().animate({ opacity: '0' }, fadeTime, function () {
-                              $(this).css({ zIndex: '98' });
-                        });
-                        $(setId + ' div div#view' + (showCont)).stop().animate({ opacity: '1' }, fadeTime, function () {
-                              $(this).css({ zIndex: '99' });
+                        // Initialize slides
+                        $(setId + ' div div').each(function (i) {
+                              $(this).attr('id', 'view' + (i + 1).toString());
+                              $(setId + ' div div').css({ zIndex: '98', opacity: '0' });
+                              $(setId + ' div div:first').css({ zIndex: '99' }).stop().animate({ opacity: '1' }, fadeTime);
                         });
 
-                        $(this).addClass('active');
-                        $(this).siblings().removeClass('active');
+                        // Click event for navigation
+                        $(setId + ' ul li').click(function () {
+                              clearInterval(setTimer);
 
-                        if (!isPaused) {
-                              timer(); // Restart timer if not paused
-                        }
-                  });
+                              var connectCont = $(setId + ' ul li').index(this);
+                              var showCont = connectCont + 1;
 
-                  // Set initial opacity and active class for navigation
-                  $(setId + ' ul li').css({ opacity: '0.5' });
-                  $(setId + ' ul li:first').addClass('active');
+                              // Switch the slides
+                              $(setId + ' div div#view' + (showCont)).siblings().stop().animate({ opacity: '0' }, fadeTime, function () {
+                                    $(this).css({ zIndex: '98' });
+                              });
+                              $(setId + ' div div#view' + (showCont)).stop().animate({ opacity: '1' }, fadeTime, function () {
+                                    $(this).css({ zIndex: '99' });
+                              });
 
-                  // Timer function to handle auto-play
-                  function timer() {
-                        clearInterval(setTimer); // Clear any previous timers to avoid conflicts
-                        setTimer = setInterval(function () {
+                              $(this).addClass('active');
+                              $(this).siblings().removeClass('active');
+
                               if (!isPaused) {
-                                    var nextIndex;
-                                    if (isRandom) {
-                                          // Random next slide
-                                          nextIndex = Math.floor(Math.random() * $(setId + ' ul li').length);
-                                    } else {
-                                          // Sequential next slide
-                                          var currentIndex = $(setId + ' ul li').index($('li.active'));
-                                          nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
-                                    }
-                                    $(setId + ' ul li').eq(nextIndex).click();
+                                    timer(); // Restart timer if not paused
                               }
-                        }, delayTime);
-                  }
+                        });
 
-                  // Toggle random play mode
-                  $('#randomPlay').click(function () {
-                        isRandom = !isRandom; // Toggle random play on/off
-                        $(this).text(isRandom ? '通常再生' : 'ランダム再生');
-                        if (!isPaused) {
-                              timer(); // Restart timer to apply random play
+                        // Set initial opacity and active class for navigation
+                        $(setId + ' ul li').css({ opacity: '0.5' });
+                        $(setId + ' ul li:first').addClass('active');
+
+                        // Timer function to handle auto-play
+                        function timer() {
+                              clearInterval(setTimer); // Clear any previous timers to avoid conflicts
+                              setTimer = setInterval(function () {
+                                    if (!isPaused) {
+                                          var nextIndex;
+                                          if (isRandom) {
+                                                // Random next slide
+                                                nextIndex = Math.floor(Math.random() * $(setId + ' ul li').length);
+                                          } else {
+                                                // Sequential next slide
+                                                var currentIndex = $(setId + ' ul li').index($('li.active'));
+                                                nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
+                                          }
+                                          $(setId + ' ul li').eq(nextIndex).click();
+                                    }
+                              }, delayTime);
                         }
+
+                        // Toggle random play mode
+                        $('#randomPlay').click(function () {
+                              isRandom = !isRandom; // Toggle random play on/off
+                              $(this).text(isRandom ? '通常再生' : 'ランダム再生');
+                              if (!isPaused) {
+                                    timer(); // Restart timer to apply random play
+                              }
+                        });
+
+                        // Toggle play/pause mode
+                        $('#togglePlay').click(function () {
+                              isPaused = !isPaused; // Toggle play/pause
+                              $(this).text(isPaused ? '再生' : '停止');
+                              if (isPaused) {
+                                    clearInterval(setTimer); // Pause the slideshow
+                              } else {
+                                    timer(); // Resume the slideshow
+                              }
+                        });
+
+                        // Start the initial timer
+                        timer();
                   });
+            </script> -->
 
-                  // Toggle play/pause mode
-                  $('#togglePlay').click(function () {
-                        isPaused = !isPaused; // Toggle play/pause
-                        $(this).text(isPaused ? '再生' : '停止');
-                        if (isPaused) {
-                              clearInterval(setTimer); // Pause the slideshow
-                        } else {
-                              timer(); // Resume the slideshow
-                        }
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    var setId = '#slideshow';
+    var fadeTime = 1500;
+    var delayTime = 5000;
+    var setTimer;
+    var isRandom = false; // Random play state
+    var isPaused = false; // Play state
+
+    // Initialize slides
+    $(setId + ' div div').each(function (i) {
+      $(this).attr('id', 'view' + (i + 1).toString());
+      $(setId + ' div div').css({ zIndex: '98', opacity: '0' });
+      $(setId + ' div div:first').css({ zIndex: '99' }).stop().animate({ opacity: '1' }, fadeTime);
+    });
+
+    // Click event for navigation
+    $(setId + ' ul li').click(function () {
+      clearInterval(setTimer);
+      var connectCont = $(setId + ' ul li').index(this);
+      var showCont = connectCont + 1;
+
+      // Switch the slides
+      $(setId + ' div div#view' + (showCont)).siblings().stop().animate({ opacity: '0' }, fadeTime, function () {
+        $(this).css({ zIndex: '98' });
+      });
+      $(setId + ' div div#view' + (showCont)).stop().animate({ opacity: '1' }, fadeTime, function () {
+        $(this).css({ zIndex: '99' });
+      });
+
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+
+      if (!isPaused) {
+        timer(); // Restart timer if not paused
+      }
+    });
+
+    // Set initial opacity and active class for navigation
+    $(setId + ' ul li').css({ opacity: '0.5' });
+    $(setId + ' ul li:first').addClass('active');
+
+    // Timer function to handle auto-play
+    function timer() {
+      clearInterval(setTimer); // Clear any previous timers to avoid conflicts
+      setTimer = setInterval(function () {
+        if (!isPaused) {
+          var nextIndex;
+          if (isRandom) {
+            // Random next slide
+            nextIndex = Math.floor(Math.random() * $(setId + ' ul li').length);
+          } else {
+            // Sequential next slide
+            var currentIndex = $(setId + ' ul li').index($('li.active'));
+            nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
+          }
+          $(setId + ' ul li').eq(nextIndex).click();
+        }
+      }, delayTime);
+    }
+
+    // Show slide function
+    function showSlide(index) {
+      $(setId + ' div div').stop().animate({ opacity: '0' }, fadeTime, function () {
+        $(this).css({ zIndex: '98' });
+      });
+      $(setId + ' div div').eq(index).stop().animate({ opacity: '1' }, fadeTime, function () {
+        $(this).css({ zIndex: '99' });
+      });
+      $(setId + ' ul li').removeClass('active').eq(index).addClass('active');
+    }
+
+    // Toggle random play mode
+    $('#randomPlay').click(function () {
+  isRandom = !isRandom; // Toggle random play on/off
+  $(this).find('img').attr('src', isRandom ? 'download/シャッフルの無料アイコン1 (1).png' : 'download/シャッフルの無料アイコン1.png');
+  if (!isPaused) {
+    timer(); // Restart timer to apply random play
+  }
+});
+
+    // Toggle play/pause mode
+    $('#togglePlay').click(function () {
+  isPaused = !isPaused; // Toggle play/pause
+  $('#playIcon').attr('src', isPaused ? 'download/play_fill.png' : 'download/pause_fill.png');
+  if (isPaused) {
+    clearInterval(setTimer); // Pause the slideshow
+  } else {
+    timer(); // Resume the slideshow
+  }
+});
+
+    // Next slide button
+    $('#nextSlide').click(function () {
+      var currentIndex = $(setId + ' ul li').index($('li.active'));
+      var nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
+      showSlide(nextIndex);
+    });
+
+    // Previous slide button
+    $('#prevSlide').click(function () {
+      var currentIndex = $(setId + ' ul li').index($('li.active'));
+      var prevIndex = (currentIndex - 1 + $(setId + ' ul li').length) % $(setId + ' ul li').length;
+      showSlide(prevIndex);
+    });
+
+    // Start the initial timer
+    timer();
+  });
+</script>
+            <script>
+                  //■page topボタン
+                  $(function () {
+                        var topBtn = $('#pageTop');
+                        topBtn.hide();
+
+                        //◇ボタンの表示設定
+                        $(window).scroll(function () {
+                              if ($(this).scrollTop() > 320) {
+                                    //---- 画面を320pxスクロールしたら、ボタンを表示する
+                                    topBtn.fadeIn();
+                              } else {
+                                    //---- 画面が320pxより上なら、ボタンを表示しない
+                                    topBtn.fadeOut();
+                              }
+                        });
+
+                        // ◇ボタンをクリックしたら、スクロールして上に戻る
+                        topBtn.click(function () {
+                              $('body,html').animate({
+                                    scrollTop: 0
+                              }, 500);
+                              return false;
+                        });
+
                   });
-
-                  // Start the initial timer
-                  timer();
-            });
-      </script>
-
-      <script>
-            //■page topボタン
-            $(function () {
-                  var topBtn = $('#pageTop');
-                  topBtn.hide();
-
-                  //◇ボタンの表示設定
-                  $(window).scroll(function () {
-                        if ($(this).scrollTop() > 320) {
-                              //---- 画面を320pxスクロールしたら、ボタンを表示する
-                              topBtn.fadeIn();
-                        } else {
-                              //---- 画面が320pxより上なら、ボタンを表示しない
-                              topBtn.fadeOut();
-                        }
-                  });
-
-                  // ◇ボタンをクリックしたら、スクロールして上に戻る
-                  topBtn.click(function () {
-                        $('body,html').animate({
-                              scrollTop: 0
-                        }, 500);
-                        return false;
-                  });
-
-            });
-      </script>
-      <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-      <script>var __adobewebfontsappname__ = "dreamweaver"</script>
-      <script src="https://use.edgefonts.net/abril-fatface:i4,n4:default.js" type="text/javascript"></script>
-
-      <body oncontextmenu="alert('ダウンロード等はご遠慮ください。'); return false;">
-
-            <body oncopy="alert('画像の無断使用等はご遠慮ください。'); return false;">
-                  </head>
-
-                  <body>
-                        <br>
-                        <hr size=5 WIDTH="90%">
-                        <hr size=5 WIDTH="85%">
-                        <hr size=5 WIDTH="80%">
-                        <hr size=5 WIDTH="75%">
-                        <hr size=5 WIDTH="70%">
-                        <div class="l-box">
-                              <h1 class="text-box-head">
-                                    <span>桜  - Cherry Blossoms -</span>
-                              </h1>
-                        </div>
-                        <p class="text-box-subhead">
-                              <span
-                                    style="font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;">”
-                                    春の日に ”</span><br>
-                              <span
-                                    style="font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;">Photo
-                                    by M.Katsuyama</span>
-                        </p>
-                        </span> 　
-                        <br>
-
-                        <div id="container">
-                              <div id="slideshow">
-                                    <div>
-
-                                          　　　<!-- 1       ワンセット01/2-->
-                                          <div><a href="#1"><img src="img/0001.jpg"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#2"><img src="img/0002.jpg" 
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#3"><img src="img/0003.jpg" 
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--2        ワンセット02/2-->
-                                          <div><a href="#4"><img src="img/0004.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#5"><img src="img/0005.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#6"><img src="img/0006.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!-- 3       ワンセット01/2-->
-                                          <div><a href="#7"><img src="img/0007.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#8"><img src="img/0008.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#9"><img src="img/0009.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--4        ワンセット02/2-->
-                                          <div><a href="#10"><img src="img/0010.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#11"><img src="img/0011.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#12"><img src="img/0012.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          　　　<!-- 5       ワンセット01/2-->
-                                          <div><a href="#13"><img src="img/0013.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#14"><img src="img/0014.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#15"><img src="img/0015.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--6       ワンセット02/2-->
-                                          <div><a href="#16"><img src="img/0016.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#17"><img src="img/0017.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#18"><img src="img/0018.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!-- 7     ワンセット01/2-->
-                                          <div><a href="#19"><img src="img/0019.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#20"><img src="img/0020.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#21"><img src="img/0021.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--8      ワンセット02/2-->
-                                          <div><a href="#22"><img src="img/0022.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#23"><img src="img/0023.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#24"><img src="img/0024.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!-- 9   ワンセット01/2-->
-                                          <div><a href="#25"><img src="img/0025.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#26"><img src="img/0026.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#27"><img src="img/0027.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--10        ワンセット02/2-->
-                                          <div><a href="#28"><img src="img/0028.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#29"><img src="img/0029.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#30"><img src="img/0030.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--11      ワンセット01/2-->
-                                          <div><a href="#31"><img src="img/0031.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#32"><img src="img/0032.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#33"><img src="img/0033.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--12       ワンセット02/2-->
-                                          <div><a href="#34"><img src="img/0034.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#35"><img src="img/0035.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#36"><img src="img/0036.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          　　　<!--13      ワンセット01/2-->
-                                          <div><a href="#37"><img src="img/0037.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#38"><img src="img/0038.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#39"><img src="img/0039.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--14        ワンセット02/2-->
-                                          <div><a href="#40"><img src="img/0040.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#41"><img src="img/0041.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#42"><img src="img/0042.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!-- 15      ワンセット01/2-->
-                                          <div><a href="#43"><img src="img/0043.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#44"><img src="img/0044.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#45"><img src="img/0045.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--16      ワンセット02/2-->
-                                          <div><a href="#46"><img src="img/0046.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#47"><img src="img/0047.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#48"><img src="img/0048.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-
-                                          　　　<!-- 17     ワンセット01/2-->
-                                          <div><a href="#49"><img src="img/0049.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#50"><img src="img/0050.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#51"><img src="img/0051.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--18        ワンセット02/2-->
-                                          <div><a href="#52"><img src="img/0052.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#53"><img src="img/0053.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#54"><img src="img/0054.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--19      ワンセット01/2-->
-                                          <div><a href="#55"><img src="img/0055.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#56"><img src="img/0056.jpg" width="481" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#57"><img src="img/0057.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--20        ワンセット02/2-->
-                                          <div><a href="#58"><img src="img/0058.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#59"><img src="img/0059.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#60"><img src="img/0060.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          　　　<!--21     ワンセット01/2-->
-                                          <div><a href="#61"><img src="img/0061.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#62"><img src="img/0062.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#63"><img src="img/0063.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--22        ワンセット02/2-->
-                                          <div><a href="#64"><img src="img/0064.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#65"><img src="img/0065.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#66"><img src="img/0066.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!--23      ワンセット01/2-->
-                                          <div><a href="#67"><img src="img/0067.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#68"><img src="img/0068.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-                                          <div><a href="#69"><img src="img/0069.jpg" width="480" height="480"
-                                                            alt="mk-Photo" /></a></div>
-
-                                          <!-24 ワンセット02/2-->
-                                                <div><a href="#70"><img src="img/0070.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#71"><img src="img/0071.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#72"><img src="img/0072.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!-- 25    ワンセット01/2-->
-                                                <div><a href="#73"><img src="img/0073.jpg" width="481" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#74"><img src="img/0074.jpg" width="481" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#75"><img src="img/0075.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--26        ワンセット02/2-->
-                                                <div><a href="#76"><img src="img/0076.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#77"><img src="img/0077.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#78"><img src="img/0078.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--27    ワンセット01/2-->
-                                                <div><a href="#79"><img src="img/0079.jpg" width="481" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#80"><img src="img/0080.jpg" width="481" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#81"><img src="img/0081.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--28       ワンセット02/2-->
-                                                <div><a href="#82"><img src="img/0082.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#83"><img src="img/0083.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#84"><img src="img/0084.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                　　　<!--29     ワンセット01/2-->
-                                                <div><a href="#85"><img src="img/0085.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#86"><img src="img/0086.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#87"><img src="img/0087.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--30      ワンセット02/2-->
-                                                <div><a href="#88"><img src="img/0088.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#89"><img src="img/0089.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#90"><img src="img/0090.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--31    ワンセット01/2-->
-                                                <div><a href="#91"><img src="img/0091.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#92"><img src="img/0092.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#93"><img src="img/0093.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--32      ワンセット02/2-->
-                                                <div><a href="#94"><img src="img/0094.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#95"><img src="img/0095.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#96"><img src="img/0096.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                                <!--33     ワンセット01/2-->
-                                                <div><a href="#97"><img src="img/0097.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#98"><img src="img/0098.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-                                                <div><a href="#99"><img src="img/0099.jpg" width="480" height="480"
-                                                                  alt="mk-Photo" /></a></div>
-
-                                    </div>
-                                    <BR>
-                                    <center>
-                                          <p class="text-box-message"> お時間が許す限り<BR>
-                                                様々な桜をお楽しみください<BR>
-                                                <BR>
-                                                　　　　　　　　　　　　　　　<i>M.Katsuyama</i>
-                                          </p> <br />
-                                    </center>
-
-
-                                    <!-- 再生・停止ボタン -->
-                                    <center style="background: #000; padding: 20px; margin-bottom: 20px;">
-                                          <button id="togglePlay" style="width: 40%; padding: 8px 0; transition: all 0.3s;">停止</button>
-                                          <button id="randomPlay" style="width: 40%; padding: 8px 0; margin-left: 15px; transition: all 0.3s;">ランダム再生</button>
-                                    </center>
-
-
-                                    <!--ul-->
-                                    <ul>
-
-                                          <!--1  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0001.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0002.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0003.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--2  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0004.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0005.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0006.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--3  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0007.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0008.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0009.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--4  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0010.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0011.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0012.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--5  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0013.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0014.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0015.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--6  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0016.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0017.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0018.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--7  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0019.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0020.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0021.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--8  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0022.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0023.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0024.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--9  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0025.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0026.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0027.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--10  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0028.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0029.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0030.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--11  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0031.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0032.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0033.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--12  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0034.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0035.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0036.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--13  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0037.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0038.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0039.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--14  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0040.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0041.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0042.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--15  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0043.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0044.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0045.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--16  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0046.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0047.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0048.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-
-                                          <!--17  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0049.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0050.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0051.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--18  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0052.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0053.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0054.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--19  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0055.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0056.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0057.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--20  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0058.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0059.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0060.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--21  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0061.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0062.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0063.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--22  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0064.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0065.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0066.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--23  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0067.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0068.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0069.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--24  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0070.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0071.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0072.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--25  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0073.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0074.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0075.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--26  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0076.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0077.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0078.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--27  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0079.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0080.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0081.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--28  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0082.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0083.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0084.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--29  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0085.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0086.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0087.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--30  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0088.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0089.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0090.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--31  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0091.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0092.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0093.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--32  2/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0094.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0095.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0096.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-                                          <!--33  1/2ワンセット-->
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0097.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0098.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-                                          <li><a href="#" class="scroll-to-top"><img src="img/0099.jpg" width="150"
-                                                            height="150" alt="mk-Photo" /></a>
-                                          </li>
-
-
-                                    </ul>
-                                    <script>
-                                          $(document).ready(function () {
-                                                // 画像クリックでページ上部へスムーズスクロール
-                                                $('.scroll-to-top').click(function (e) {
-                                                      e.preventDefault(); // デフォルトのリンク動作を無効化
-                                                      $('html, body').animate({ scrollTop: 0 }, 500); // 0.5秒で上部へスクロール
-                                                });
-                                          });
-
-
-                                    </script>
+            </script>
+            <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+            <script>var __adobewebfontsappname__ = "dreamweaver"</script>
+            <script src="https://use.edgefonts.net/abril-fatface:i4,n4:default.js" type="text/javascript"></script>
+
+            <body oncontextmenu="alert('ダウンロード等はご遠慮ください。'); return false;">
+
+                  <body oncopy="alert('画像の無断使用等はご遠慮ください。'); return false;">
+                        </head>
+
+                        <body>
+                              <br>
+                              <hr size=5 WIDTH="90%">
+                              <hr size=5 WIDTH="85%">
+                              <hr size=5 WIDTH="80%">
+                              <hr size=5 WIDTH="75%">
+                              <hr size=5 WIDTH="70%">
+                              <div class="l-box">
+                                    <h1 class="text-box-head">
+                                          <span>桜 - Cherry Blossoms -</span>
+                                    </h1>
                               </div>
-                        </div>
+                              <p class="text-box-subhead">
+                                    <span class="text-box-subhead1"
+                                          style="font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;">”
+                                          春の日に ”</span><br>
+                                    <span class="text-box-subhead2"
+                                          style="font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;">Photo
+                                          by M.Katsuyama</span>
+                              </p>
+                              </span> 　
+                              <br>
+
+                              <div id="container">
+                                    <div id="slideshow">
+                                          <div>
+
+                                                　　　<!-- 1       ワンセット01/2-->
+                                                <div><a href="#1"><img src="img/0001.jpg" alt="mk-Photo" /></a></div>
+                                                <div><a href="#2"><img src="img/0002.jpg" alt="mk-Photo" /></a></div>
+                                                <div><a href="#3"><img src="img/0003.jpg" alt="mk-Photo" /></a></div>
+
+                                                <!--2        ワンセット02/2-->
+                                                <div><a href="#4"><img src="img/0004.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#5"><img src="img/0005.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#6"><img src="img/0006.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!-- 3       ワンセット01/2-->
+                                                <div><a href="#7"><img src="img/0007.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#8"><img src="img/0008.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#9"><img src="img/0009.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--4        ワンセット02/2-->
+                                                <div><a href="#10"><img src="img/0010.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#11"><img src="img/0011.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#12"><img src="img/0012.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                　　　<!-- 5       ワンセット01/2-->
+                                                <div><a href="#13"><img src="img/0013.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#14"><img src="img/0014.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#15"><img src="img/0015.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--6       ワンセット02/2-->
+                                                <div><a href="#16"><img src="img/0016.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#17"><img src="img/0017.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#18"><img src="img/0018.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!-- 7     ワンセット01/2-->
+                                                <div><a href="#19"><img src="img/0019.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#20"><img src="img/0020.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#21"><img src="img/0021.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--8      ワンセット02/2-->
+                                                <div><a href="#22"><img src="img/0022.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#23"><img src="img/0023.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#24"><img src="img/0024.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!-- 9   ワンセット01/2-->
+                                                <div><a href="#25"><img src="img/0025.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#26"><img src="img/0026.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#27"><img src="img/0027.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--10        ワンセット02/2-->
+                                                <div><a href="#28"><img src="img/0028.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#29"><img src="img/0029.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#30"><img src="img/0030.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--11      ワンセット01/2-->
+                                                <div><a href="#31"><img src="img/0031.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#32"><img src="img/0032.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#33"><img src="img/0033.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--12       ワンセット02/2-->
+                                                <div><a href="#34"><img src="img/0034.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#35"><img src="img/0035.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#36"><img src="img/0036.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                　　　<!--13      ワンセット01/2-->
+                                                <div><a href="#37"><img src="img/0037.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#38"><img src="img/0038.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#39"><img src="img/0039.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--14        ワンセット02/2-->
+                                                <div><a href="#40"><img src="img/0040.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#41"><img src="img/0041.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#42"><img src="img/0042.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!-- 15      ワンセット01/2-->
+                                                <div><a href="#43"><img src="img/0043.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#44"><img src="img/0044.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#45"><img src="img/0045.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--16      ワンセット02/2-->
+                                                <div><a href="#46"><img src="img/0046.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#47"><img src="img/0047.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#48"><img src="img/0048.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
 
 
-                        <hr size=5 WIDTH="75%">
-                        <hr size=5 WIDTH="80%">
-                        <hr size=5 WIDTH="85%">
-                        <hr size=5 WIDTH="90%">
-                        <hr size=5 WIDTH="95%">
-                        <br>
-                        <br>
-                        <center class="f-box">
-                              <IMG SRC="https://cgi.www.ne.jp/cgi-bin/Count.cgi?df=index.dat" ALT=""><BR>
-                        </center>
+                                                　　　<!-- 17     ワンセット01/2-->
+                                                <div><a href="#49"><img src="img/0049.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#50"><img src="img/0050.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#51"><img src="img/0051.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
 
-                        <br>
-                        <h2>2024 &copy;M.Katsuyama</h2>
-                        <p id="pageTop"><a href="#"><img src="gototop_kuma_120p.jpg" height="120"></a></p>
+                                                <!--18        ワンセット02/2-->
+                                                <div><a href="#52"><img src="img/0052.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#53"><img src="img/0053.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#54"><img src="img/0054.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--19      ワンセット01/2-->
+                                                <div><a href="#55"><img src="img/0055.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#56"><img src="img/0056.jpg" width="481" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#57"><img src="img/0057.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--20        ワンセット02/2-->
+                                                <div><a href="#58"><img src="img/0058.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#59"><img src="img/0059.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#60"><img src="img/0060.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                　　　<!--21     ワンセット01/2-->
+                                                <div><a href="#61"><img src="img/0061.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#62"><img src="img/0062.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#63"><img src="img/0063.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--22        ワンセット02/2-->
+                                                <div><a href="#64"><img src="img/0064.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#65"><img src="img/0065.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#66"><img src="img/0066.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!--23      ワンセット01/2-->
+                                                <div><a href="#67"><img src="img/0067.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#68"><img src="img/0068.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+                                                <div><a href="#69"><img src="img/0069.jpg" width="480" height="480"
+                                                                  alt="mk-Photo" /></a></div>
+
+                                                <!-24 ワンセット02/2-->
+                                                      <div><a href="#70"><img src="img/0070.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#71"><img src="img/0071.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#72"><img src="img/0072.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!-- 25    ワンセット01/2-->
+                                                      <div><a href="#73"><img src="img/0073.jpg" width="481"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#74"><img src="img/0074.jpg" width="481"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#75"><img src="img/0075.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--26        ワンセット02/2-->
+                                                      <div><a href="#76"><img src="img/0076.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#77"><img src="img/0077.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#78"><img src="img/0078.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--27    ワンセット01/2-->
+                                                      <div><a href="#79"><img src="img/0079.jpg" width="481"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#80"><img src="img/0080.jpg" width="481"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#81"><img src="img/0081.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--28       ワンセット02/2-->
+                                                      <div><a href="#82"><img src="img/0082.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#83"><img src="img/0083.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#84"><img src="img/0084.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      　　　<!--29     ワンセット01/2-->
+                                                      <div><a href="#85"><img src="img/0085.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#86"><img src="img/0086.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#87"><img src="img/0087.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--30      ワンセット02/2-->
+                                                      <div><a href="#88"><img src="img/0088.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#89"><img src="img/0089.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#90"><img src="img/0090.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--31    ワンセット01/2-->
+                                                      <div><a href="#91"><img src="img/0091.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#92"><img src="img/0092.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#93"><img src="img/0093.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--32      ワンセット02/2-->
+                                                      <div><a href="#94"><img src="img/0094.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#95"><img src="img/0095.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#96"><img src="img/0096.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                                      <!--33     ワンセット01/2-->
+                                                      <div><a href="#97"><img src="img/0097.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#98"><img src="img/0098.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+                                                      <div><a href="#99"><img src="img/0099.jpg" width="480"
+                                                                        height="480" alt="mk-Photo" /></a></div>
+
+                                          </div>
+                                          <BR>
+                                          <!-- 再生・停止ボタン -->
+                                          <center
+                                                style="background: #000; padding: 20px 10px; margin-bottom: 50px;">
+                                                <button id="prevSlide" class="play-btn">
+                                                      <img src="download/skip_previous_fill.png" alt="">
+                                                </button>
+
+                                                <button id="togglePlay" class="play-btn">
+                                                      <img id="playIcon" src="download/play_fill.png" alt="">
+                                                </button>
+                                                <button id="nextSlide" class="play-btn">
+                                                      <img src="download/skip_forward_fill.png" alt="">
+                                                </button>
+
+                                                <button id="randomPlay" class="play-btn">
+                                                      <img src="download/シャッフルの無料アイコン1.png" alt="">
+                                                </button>
+
+
+                                          </center>
+
+
+                                          <center>
+                                                <p class="text-box-message"> お時間が許す限り<BR>
+                                                      様々な桜をお楽しみください<BR>
+                                                      <BR>
+                                                      　　　　　　　　　　　　　　　<i>M.Katsuyama</i>
+                                                </p> <br />
+                                          </center>
 
 
 
-                  </body>
+
+                                          <!--ul-->
+                                          <ul>
+
+                                                <!--1  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0001.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0002.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0003.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--2  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0004.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0005.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0006.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--3  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0007.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0008.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0009.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--4  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0010.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0011.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0012.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--5  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0013.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0014.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0015.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--6  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0016.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0017.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0018.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--7  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0019.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0020.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0021.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--8  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0022.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0023.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0024.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--9  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0025.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0026.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0027.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--10  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0028.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0029.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0030.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--11  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0031.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0032.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0033.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--12  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0034.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0035.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0036.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--13  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0037.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0038.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0039.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--14  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0040.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0041.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0042.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--15  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0043.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0044.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0045.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--16  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0046.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0047.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0048.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+
+                                                <!--17  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0049.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0050.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0051.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--18  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0052.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0053.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0054.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--19  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0055.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0056.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0057.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--20  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0058.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0059.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0060.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--21  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0061.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0062.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0063.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--22  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0064.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0065.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0066.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--23  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0067.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0068.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0069.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--24  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0070.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0071.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0072.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--25  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0073.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0074.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0075.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--26  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0076.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0077.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0078.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--27  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0079.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0080.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0081.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--28  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0082.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0083.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0084.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--29  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0085.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0086.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0087.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--30  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0088.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0089.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0090.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--31  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0091.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0092.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0093.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--32  2/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0094.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0095.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0096.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+                                                <!--33  1/2ワンセット-->
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0097.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0098.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+                                                <li><a href="#" class="scroll-to-top"><img src="img/0099.jpg"
+                                                                  width="150" height="150" alt="mk-Photo" /></a>
+                                                </li>
+
+
+                                          </ul>
+                                          <script>
+                                                $(document).ready(function () {
+                                                      // 画像クリックでページ上部へスムーズスクロール
+                                                      $('.scroll-to-top').click(function (e) {
+                                                            e.preventDefault(); // デフォルトのリンク動作を無効化
+                                                            $('html, body').animate({ scrollTop: 0 }, 500); // 0.5秒で上部へスクロール
+                                                      });
+                                                });
+
+
+                                          </script>
+                                    </div>
+                              </div>
+
+
+                              <hr size=5 WIDTH="75%">
+                              <hr size=5 WIDTH="80%">
+                              <hr size=5 WIDTH="85%">
+                              <hr size=5 WIDTH="90%">
+                              <hr size=5 WIDTH="95%">
+                              <br>
+                              <br>
+                              <center class="f-box">
+                                    <IMG SRC="https://cgi.www.ne.jp/cgi-bin/Count.cgi?df=index.dat" ALT=""><BR>
+                              </center>
+
+                              <br>
+                              <h2>2024 &copy;M.Katsuyama</h2>
+                              <p id="pageTop"><a href="#"><img src="gototop_kuma_120p.jpg" height="120"></a></p>
+
+
+
+                        </body>
 
 </html>
