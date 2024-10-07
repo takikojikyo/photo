@@ -55,7 +55,7 @@ h2 {
     padding: 0 4%;
     text-align: center;
 }
-#slideshow div {
+#slideshow .main-slide {
     /* width: 480px; */
     width: 100%;
     overflow: hidden;
@@ -63,14 +63,14 @@ h2 {
     max-width: none;
     height: 800px;
 }
-#slideshow div div {
+#slideshow .main-slide div {
     top: 0;
     left: 0;
     position: absolute;
     /* width: 480px; */
     width: 100%;
 }
-#slideshow div div img{
+#slideshow .main-slide div img{
     width: 100%;
     height: auto;
 }
@@ -189,19 +189,19 @@ h3 {
 
 
 @media (max-width: 768px) {
-    #slideshow div {
+    #slideshow .main-slide {
         height: 720px;
     }
 }
 
 @media (max-width: 660px) {
-    #slideshow div {
+    #slideshow .main-slide {
         height: 600px;
     }
 }
 
 @media (max-width: 550px) {
-    #slideshow div {
+    #slideshow .main-slide {
         height: 500px;
     }
 
@@ -212,7 +212,7 @@ h3 {
 }
 
 @media (max-width: 450px) {
-    #slideshow div {
+    #slideshow .main-slide {
         height: 400px;
     }
 }
