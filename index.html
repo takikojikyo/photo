@@ -123,14 +123,14 @@
                   /* 再生ボタン・ランダム再生ボタンのホバー時に色を変える */
 
                   .play-btn-box {
-                        background: #000;
+                        /* background: #000; */
                         height: 120px;
                         margin-bottom: 50px;
                         position: relative;
                   }
 
                   .play-btn-box .play-btn-list {
-                        
+                        width: 100%;
                         height: auto;
                         position: absolute;
                         top: 20px;
@@ -139,7 +139,7 @@
 
                   .play-btn {
                         width: 15%;
-                        background: #000;
+                        background: #313131;
                         border: none;
                         padding: 8px 0;
                         margin-right: 20px;
@@ -161,11 +161,19 @@
                         width: 36px;
                   }
 
-                  .play-btn:hover {
-                        opacity: 0.7;
-                  }
+                  
 
-            
+                  /* Dot style */
+                  .dot {
+                        width: 6px;
+                        /* Adjust the size if needed */
+                        height: 6px;
+                        /* Adjust the size if needed */
+                        background-color: #FF7800;
+                        border-radius: 50%;
+                        margin: 3px auto 0;
+                        /* Space from the image */
+                  }
 
                   .f-box {
                         padding: 0 4%;
@@ -186,26 +194,26 @@
                         }
 
                         .play-btn-box {
-                        height: 100px;
-                  }
+                              height: 100px;
+                        }
 
-                  .play-btn-box .play-btn-list {
-                        top: 15px;
-                  }
+                        .play-btn-box .play-btn-list {
+                              top: 15px;
+                        }
 
-                  .play-btn {
-                        margin-right: 15px;
-                  }
+                        .play-btn {
+                              margin-right: 15px;
+                        }
 
 
-                  #togglePlay {
-                        width: 70px;
-                        height: 70px;
-                  }
+                        #togglePlay {
+                              width: 70px;
+                              height: 70px;
+                        }
 
-                  .play-btn img {
-                        width: 24px;
-                  }
+                        .play-btn img {
+                              width: 24px;
+                        }
                   }
 
                   @media (max-width: 500px) {
@@ -214,8 +222,9 @@
                         }
 
                         .play-btn-box .play-btn-list {
-                        left: 0%;
-                  }
+                              left: 0%;
+                        }
+
                         .play-btn {
                               width: 20%;
                               padding: 10px 0;
@@ -224,7 +233,7 @@
                         }
 
 
-                        
+
                   }
             </style>
             <script>
@@ -456,7 +465,18 @@
                         // Toggle random play mode
                         $('#randomPlay').click(function () {
                               isRandom = !isRandom; // Toggle random play on/off
-                              $(this).find('img').attr('src', isRandom ? 'download/シャッフルの無料アイコン1 (1).png' : 'download/シャッフルの無料アイコン1.png');
+                              var img = $(this).find('img');
+                              img.attr('src', isRandom ? 'download/シャッフルの無料アイコン1 (1).png' : 'download/シャッフルの無料アイコン1.png');
+
+                              // Add or remove the dot
+                              if (isRandom) {
+                                    if (!img.next('.dot').length) { // Check if dot doesn't exist
+                                          img.after('<div class="dot"></div>');
+                                    }
+                              } else {
+                                    img.next('.dot').remove(); // Remove dot if not in random mode
+                              }
+
                               if (!isPaused) {
                                     timer(); // Restart timer to apply random play
                               }
@@ -552,7 +572,7 @@
 
                               <div id="container">
                                     <div id="slideshow">
-                                          <div>
+                                          <div class="main-slide">
 
                                                 　　　<!-- 1       ワンセット01/2-->
                                                 <div><a href="#1"><img src="img/0001.jpg" alt="mk-Photo" /></a></div>
