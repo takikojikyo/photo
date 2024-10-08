@@ -3,6 +3,8 @@
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
 
 <head>
+      <title>Slide Show 「桜 - Cherry Blossoms - 日本の美 」  by M.Katsuyama</title>
+    <meta name="description" content="M.Katsuyamaが撮影した写真のSlideShowが楽しめるサイトです　このページでは「日本の美」の象徴である「桜」の様々な姿の写真を堪能できます">
       <!--    ロボットインデックス登録巡回リンクたどり不可-->
       <meta name="robots" content="noindex,nofollow">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -161,18 +163,43 @@
                         width: 36px;
                   }
 
-                  
+
 
                   /* Dot style */
-                  .dot {
+                  /* .dot {
                         width: 6px;
-                        /* Adjust the size if needed */
                         height: 6px;
-                        /* Adjust the size if needed */
                         background-color: #FF7800;
                         border-radius: 50%;
-                        margin: 3px auto 0;
-                        /* Space from the image */
+                        position: absolute;
+                        top: 100px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                  } */
+                  #randomPlay {
+                        position: relative;
+                        /* ドットの位置を指定するために relative を追加 */
+                  }
+
+                  #randomPlay::after {
+                        content: "";
+                        width: 6px;
+                        /* ドットのサイズを調整 */
+                        height: 6px;
+                        background-color: #FF7800;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 42px;
+                        /* ボタンの下に来るように調整（この値でドットの上下位置を調整） */
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: none;
+                        /* 初期状態で非表示 */
+                  }
+
+                  /* ドットの表示切替 */
+                  #randomPlay.active::after {
+                        display: block;
                   }
 
                   .f-box {
@@ -301,95 +328,9 @@
             });
       </script>-->
 
+
+
             <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <script type="text/javascript">
-                  $(function () {
-                        var setId = '#slideshow';
-                        var fadeTime = 1500;
-                        var delayTime = 5000;
-                        var setTimer;
-                        var isRandom = false; // Random play state
-                        var isPaused = false; // Play state
-
-                        // Initialize slides
-                        $(setId + ' div div').each(function (i) {
-                              $(this).attr('id', 'view' + (i + 1).toString());
-                              $(setId + ' div div').css({ zIndex: '98', opacity: '0' });
-                              $(setId + ' div div:first').css({ zIndex: '99' }).stop().animate({ opacity: '1' }, fadeTime);
-                        });
-
-                        // Click event for navigation
-                        $(setId + ' ul li').click(function () {
-                              clearInterval(setTimer);
-
-                              var connectCont = $(setId + ' ul li').index(this);
-                              var showCont = connectCont + 1;
-
-                              // Switch the slides
-                              $(setId + ' div div#view' + (showCont)).siblings().stop().animate({ opacity: '0' }, fadeTime, function () {
-                                    $(this).css({ zIndex: '98' });
-                              });
-                              $(setId + ' div div#view' + (showCont)).stop().animate({ opacity: '1' }, fadeTime, function () {
-                                    $(this).css({ zIndex: '99' });
-                              });
-
-                              $(this).addClass('active');
-                              $(this).siblings().removeClass('active');
-
-                              if (!isPaused) {
-                                    timer(); // Restart timer if not paused
-                              }
-                        });
-
-                        // Set initial opacity and active class for navigation
-                        $(setId + ' ul li').css({ opacity: '0.5' });
-                        $(setId + ' ul li:first').addClass('active');
-
-                        // Timer function to handle auto-play
-                        function timer() {
-                              clearInterval(setTimer); // Clear any previous timers to avoid conflicts
-                              setTimer = setInterval(function () {
-                                    if (!isPaused) {
-                                          var nextIndex;
-                                          if (isRandom) {
-                                                // Random next slide
-                                                nextIndex = Math.floor(Math.random() * $(setId + ' ul li').length);
-                                          } else {
-                                                // Sequential next slide
-                                                var currentIndex = $(setId + ' ul li').index($('li.active'));
-                                                nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
-                                          }
-                                          $(setId + ' ul li').eq(nextIndex).click();
-                                    }
-                              }, delayTime);
-                        }
-
-                        // Toggle random play mode
-                        $('#randomPlay').click(function () {
-                              isRandom = !isRandom; // Toggle random play on/off
-                              $(this).text(isRandom ? '通常再生' : 'ランダム再生');
-                              if (!isPaused) {
-                                    timer(); // Restart timer to apply random play
-                              }
-                        });
-
-                        // Toggle play/pause mode
-                        $('#togglePlay').click(function () {
-                              isPaused = !isPaused; // Toggle play/pause
-                              $(this).text(isPaused ? '再生' : '停止');
-                              if (isPaused) {
-                                    clearInterval(setTimer); // Pause the slideshow
-                              } else {
-                                    timer(); // Resume the slideshow
-                              }
-                        });
-
-                        // Start the initial timer
-                        timer();
-                  });
-            </script> -->
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script type="text/javascript">
                   $(function () {
                         var setId = '#slideshow';
@@ -510,7 +451,144 @@
                         // Start the initial timer
                         timer();
                   });
+            </script> -->
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                  $(function () {
+                        var setId = '#slideshow';
+                        var fadeTime = 1500;
+                        var delayTime = 5000;
+                        var setTimer;
+                        var isRandom = false; // Random play state
+                        var isPaused = false; // Play state
+                        var playHistory = []; // Play history for random mode
+                        var historyIndex = -1; // Current position in the play history
+
+                        // Initialize slides
+                        $(setId + ' div div').each(function (i) {
+                              $(this).attr('id', 'view' + (i + 1).toString());
+                              $(setId + ' div div').css({ zIndex: '98', opacity: '0' });
+                              $(setId + ' div div:first').css({ zIndex: '99' }).stop().animate({ opacity: '1' }, fadeTime);
+                        });
+
+                        // Click event for navigation
+                        $(setId + ' ul li').click(function () {
+                              clearInterval(setTimer);
+                              var connectCont = $(setId + ' ul li').index(this);
+                              var showCont = connectCont + 1;
+
+                              // Switch the slides
+                              $(setId + ' div div#view' + (showCont)).siblings().stop().animate({ opacity: '0' }, fadeTime, function () {
+                                    $(this).css({ zIndex: '98' });
+                              });
+                              $(setId + ' div div#view' + (showCont)).stop().animate({ opacity: '1' }, fadeTime, function () {
+                                    $(this).css({ zIndex: '99' });
+                              });
+
+                              $(this).addClass('active');
+                              $(this).siblings().removeClass('active');
+
+                              if (!isPaused) {
+                                    timer(); // Restart timer if not paused
+                              }
+                        });
+
+                        // Set initial opacity and active class for navigation
+                        $(setId + ' ul li').css({ opacity: '0.5' });
+                        $(setId + ' ul li:first').addClass('active');
+
+                        // Timer function to handle auto-play
+                        function timer() {
+                              clearInterval(setTimer); // Clear any previous timers to avoid conflicts
+                              setTimer = setInterval(function () {
+                                    if (!isPaused) {
+                                          var nextIndex;
+                                          if (isRandom) {
+                                                // Random next slide
+                                                nextIndex = Math.floor(Math.random() * $(setId + ' ul li').length);
+                                                playHistory.push(nextIndex); // Save to play history
+                                                historyIndex = playHistory.length - 1;
+                                          } else {
+                                                // Sequential next slide
+                                                var currentIndex = $(setId + ' ul li').index($('li.active'));
+                                                nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
+                                          }
+                                          $(setId + ' ul li').eq(nextIndex).click();
+                                    }
+                              }, delayTime);
+                        }
+
+                        // Show slide function
+                        function showSlide(index) {
+                              $(setId + ' div div').stop().animate({ opacity: '0' }, fadeTime, function () {
+                                    $(this).css({ zIndex: '98' });
+                              });
+                              $(setId + ' div div').eq(index).stop().animate({ opacity: '1' }, fadeTime, function () {
+                                    $(this).css({ zIndex: '99' });
+                              });
+                              $(setId + ' ul li').removeClass('active').eq(index).addClass('active');
+                        }
+
+                        // Toggle random play mode
+                        $('#randomPlay').click(function () {
+                              isRandom = !isRandom; // Toggle random play on/off
+                              var img = $(this).find('img');
+                              img.attr('src', isRandom ? 'download/シャッフルの無料アイコン1 (1).png' : 'download/シャッフルの無料アイコン1.png');
+                              playHistory = []; // Reset play history on toggle
+                              historyIndex = -1;
+
+                              if (isRandom) {
+                                    $(this).addClass('active'); // ランダム再生モードでドットを表示
+                              } else {
+                                    $(this).removeClass('active'); // ドットを非表示
+                              }
+
+                              if (!isPaused) {
+                                    timer(); // Restart timer to apply random play
+                              }
+                        });
+
+
+                        // Toggle play/pause mode
+                        $('#togglePlay').click(function () {
+                              isPaused = !isPaused; // Toggle play/pause
+                              $('#playIcon').attr('src', isPaused ? 'download/play_fill.png' : 'download/pause_fill.png');
+                              if (isPaused) {
+                                    clearInterval(setTimer); // Pause the slideshow
+                              } else {
+                                    timer(); // Resume the slideshow
+                              }
+                        });
+
+                        // Next slide button
+                        $('#nextSlide').click(function () {
+                              var currentIndex = $(setId + ' ul li').index($('li.active'));
+                              var nextIndex = (currentIndex + 1) % $(setId + ' ul li').length;
+                              showSlide(nextIndex);
+                        });
+
+                        // Previous slide button
+                        $('#prevSlide').click(function () {
+                              if (isRandom && playHistory.length > 1 && historyIndex > 0) {
+                                    historyIndex--;
+                                    var prevIndex = playHistory[historyIndex];
+                                    showSlide(prevIndex);
+                              } else if (!isRandom) {
+                                    var currentIndex = $(setId + ' ul li').index($('li.active'));
+                                    var prevIndex = (currentIndex - 1 + $(setId + ' ul li').length) % $(setId + ' ul li').length;
+                                    showSlide(prevIndex);
+                              }
+                        });
+
+                        // Start the initial timer and set play icon to pause
+                        $('#playIcon').attr('src', 'download/pause_fill.png'); // Set initial icon to "pause"
+                        timer();
+                  });
             </script>
+
+
+
             <script>
                   //■page topボタン
                   $(function () {
