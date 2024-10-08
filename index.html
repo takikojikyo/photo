@@ -3,8 +3,10 @@
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
 
 <head>
-      <title>Slide Show 「桜 - Cherry Blossoms - 日本の美 」  by M.Katsuyama</title>
-    <meta name="description" content="M.Katsuyamaが撮影した写真のSlideShowが楽しめるサイトです　このページでは「日本の美」の象徴である「桜」の様々な姿の写真を堪能できます">
+      <title>Slide Show 「桜 - Cherry Blossoms - 日本の美 」 by M.Katsuyama</title>
+      <meta name="description" content="M.Katsuyamaが撮影した写真のSlideShowが楽しめるサイトです　このページでは「日本の美」の象徴である「桜」の様々な姿の写真を堪能できます">
+      <link rel="icon" href="download/favicon.ico">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
       <!--    ロボットインデックス登録巡回リンクたどり不可-->
       <meta name="robots" content="noindex,nofollow">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,15 +73,15 @@
                   }
 
                   /*        ページトップへ移動*/
-                  #pageTop {
+                  /* #pageTop {
                         position: fixed;
                         bottom: 50px;
                         right: 62%;
-                  }
+                  } */
 
-                  #pageTop i {
+                  /* #pageTop i {
                         padding-top: 6px
-                  }
+                  } */
 
                   .text-box-head span {
                         font-size: 32px;
@@ -116,10 +118,46 @@
     line-height: 0.9em;}
 */
 
-                  #pageTop a:hover {
+                  /* #pageTop a:hover {
                         color: #F27607;
                         text-decoration: none;
-                        /*  opacity: 0.7;*/
+                  } */
+
+                  #pagetop {
+                        width: 60px;
+                        height: 60px;
+                        position: fixed;
+                        right: 2%;
+                        bottom: 10px;
+                        background: #FF7800;
+                        opacity: 0.8;
+                        border-radius: 50%;
+                        z-index: 999;
+                  }
+
+                  #pagetop a {
+                        position: relative;
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        text-decoration: none;
+                  }
+
+                  #pagetop a::before {
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        content: '\f102';
+                        font-size: 25px;
+                        color: #fff;
+                        position: absolute;
+                        width: 25px;
+                        height: 25px;
+                        top: 0px;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        text-align: center;
                   }
 
                   /* 再生ボタン・ランダム再生ボタンのホバー時に色を変える */
@@ -132,15 +170,15 @@
                   }
 
                   .play-btn-box .play-btn-list {
-                        width: 100%;
+                        width: 84%;
                         height: auto;
                         position: absolute;
                         top: 20px;
-                        left: 10%;
+                        left: 18%;
                   }
 
                   .play-btn {
-                        width: 15%;
+                        width: 20%;
                         background: #313131;
                         border: none;
                         padding: 8px 0;
@@ -241,6 +279,26 @@
                         .play-btn img {
                               width: 24px;
                         }
+
+                        #pagetop {
+                        width: 50px;
+                        height: 50px;
+                        }
+                        #pagetop a {
+                        width: 50px;
+                        height: 50px;
+                  }
+
+                  #pagetop a::before {
+                        
+                        width: 25px;
+                        height: 25px;
+                        top: -5px;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                  }
+
                   }
 
                   @media (max-width: 500px) {
@@ -250,6 +308,7 @@
 
                         .play-btn-box .play-btn-list {
                               left: 0%;
+                              width: 100%;
                         }
 
                         .play-btn {
@@ -592,16 +651,16 @@
             <script>
                   //■page topボタン
                   $(function () {
-                        var topBtn = $('#pageTop');
+                        var topBtn = $('#pagetop');
                         topBtn.hide();
 
                         //◇ボタンの表示設定
                         $(window).scroll(function () {
-                              if ($(this).scrollTop() > 320) {
-                                    //---- 画面を320pxスクロールしたら、ボタンを表示する
+                              if ($(this).scrollTop() > 500) {
+                                    //---- 画面を500pxスクロールしたら、ボタンを表示する
                                     topBtn.fadeIn();
                               } else {
-                                    //---- 画面が320pxより上なら、ボタンを表示しない
+                                    //---- 画面が500pxより上なら、ボタンを表示しない
                                     topBtn.fadeOut();
                               }
                         });
@@ -1346,7 +1405,7 @@
 
                               <br>
                               <h2>2024 &copy;M.Katsuyama</h2>
-                              <p id="pageTop"><a href="#"><img src="gototop_kuma_120p.jpg" height="120"></a></p>
+                              <div id="pagetop"><a href="#"></a></div>
 
 
 
