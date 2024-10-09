@@ -127,7 +127,6 @@
                         width: 60px;
                         height: 60px;
                         position: fixed;
-                        right: 2%;
                         bottom: 10px;
                         background: #FF7800;
                         opacity: 0.8;
@@ -245,6 +244,18 @@
                   }
 
                   /* レスポンシブ対応 */
+                  @media (min-width: 870px) {
+                        #pagetop {
+                              right: calc((100% - 870px) / 2 + 10px);
+                              /* 画面の右端に固定 */
+                        }
+                  }
+                  @media (max-width: 870px){
+                        #pagetop {
+                              right: 2%;
+                        }
+                  }
+
                   @media (max-width: 768px) {
                         .text-box-head span {
                               font-size: 28px;
@@ -281,23 +292,24 @@
                         }
 
                         #pagetop {
-                        width: 50px;
-                        height: 50px;
+                              width: 50px;
+                              height: 50px;
                         }
-                        #pagetop a {
-                        width: 50px;
-                        height: 50px;
-                  }
 
-                  #pagetop a::before {
-                        
-                        width: 25px;
-                        height: 25px;
-                        top: -5px;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
-                  }
+                        #pagetop a {
+                              width: 50px;
+                              height: 50px;
+                        }
+
+                        #pagetop a::before {
+
+                              width: 25px;
+                              height: 25px;
+                              top: -5px;
+                              bottom: 0;
+                              right: 0;
+                              left: 0;
+                        }
 
                   }
 
